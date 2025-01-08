@@ -1,15 +1,4 @@
 spring:
-  application:
-    name: userrole
-  cloud:
-    vault:
-      uri: http://127.0.0.1:8200  # Vault server URI
-      token: #
-      authentication: token
-      kv:
-        enabled: true
-        backend: secret
-        default-context: mysql  # This should be the correct path
   datasource:
     url: jdbc:mysql://localhost:3306/userschema?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
     username: root #${vault.secret.data.data.mysql.username}  # Corrected path
