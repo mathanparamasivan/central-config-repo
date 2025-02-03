@@ -15,11 +15,10 @@ spring:
     vault:
       uri: http://127.0.0.1:8200
       token: hvs.1GFqk1myqw3o0t9Uh50KGCv1
-      kv-version: 2              # Use KV Version 2 (with the /data/ path)
-      kv:
-        enabled: true
-        backend: secret
-        default-context: application  # The context name (path) where your keys are stored
+      kv-version: 2 # Use KV Version 2 (with the /data/ path)
+      enabled: true
+      backend: secret
+      default-context: mysql_vault  # The context name (path) where your keys are stored
 server:
   port: 8084
 
