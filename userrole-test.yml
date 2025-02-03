@@ -17,9 +17,7 @@ spring:
       kv:
         enabled: true
         backend: secret
-      application-name: mysql_vault
-
-
+        default-context: mysql_vault  # The context name (path) where your keys are stored
 server:
   port: 8084
 
