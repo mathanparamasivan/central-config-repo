@@ -1,14 +1,14 @@
 spring:
   cloud:
     vault:
-      uri: http://host.docker.internal:8200
+      uri: http://172.26.192.1:8200
       token: hvs.1GFqk1myqw3o0t9Uh50KGCv1
       kv:
         enabled: true
         backend: secret
       application-name: mysql_vault
   datasource:
-    url: jdbc:mysql://host.docker.internal:3308/userschema?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://172.26.192.1:3308/userschema?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     jpa:
       hibernate:
