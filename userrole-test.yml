@@ -14,7 +14,7 @@ spring:
   cloud:
     vault:
       uri: http://127.0.0.1:8200
-      token: hvs.1GFqk1myqw3o0t9Uh50KGCv1
+      token: hvs.RAJ1TAr7TqZy0jOciaxiD2CE
       kv-version: 2 # Use KV Version 2 (with the /data/ path)
       enabled: true
       backend: secret
