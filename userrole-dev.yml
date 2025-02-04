@@ -9,7 +9,7 @@ spring:
       application-name: mysql_vault
   datasource:
     url: jdbc:mysql://172.26.192.1:3308/userschema?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
-    username: ${user_name}  #${vault.secret.data.data.mysql.username}  # Corrected path
+    username: ${username}  #${vault.secret.data.data.mysql.username}  # Corrected path
     password: ${password} #${vault.secret.data.data.mysql.password}  # Corrected path
     driver-class-name: com.mysql.cj.jdbc.Driver
     jpa:
