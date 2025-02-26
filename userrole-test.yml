@@ -9,7 +9,7 @@ spring:
   cloud:
     vault:
       uri: http://172.26.192.1:8200
-      token: hvs.ck3qpcymhCDeF3QUYpLyihwA
+      token: hvs.bk8Bg6eBYeP9FBQOQ330C39a
       kv:
         enabled: true
         backend: secret
