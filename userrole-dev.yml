@@ -1,3 +1,6 @@
+server:
+  port: 8084
+
 spring:
   redis:
     host: localhost
@@ -5,6 +8,7 @@ spring:
   cache:
     redis:
       time-to-live: 600000 # 10 minutes
+
   cloud:
     vault:
       uri: http://172.26.192.1:8200
@@ -13,25 +17,29 @@ spring:
         enabled: true
         backend: secret
       application-name: mysql_vault
+
   datasource:
     url: jdbc:mysql://172.26.192.1:3308/userschema?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: fetchfromvault
     password: fetchfromvault
-    jpa:
-      properties:
-        hibernate:
-          format-sql: true
-      hibernate:
-        ddl-auto: update  # Options: none, validate, update, create-drop
-      show-sql: true
-      database-platform: org.hibernate.dialect.MySQLDialect
-    logging:
-      level:
-        org.hibernate.SQL: DEBUG
-        org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
-server:
-  port: 8084
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+      javax:
+        persistence:
+          validation:
+            factory: org.hibernate.validator.HibernateValidator
+    hibernate:
+      ddl-auto: update  # Options: none, validate, update, create-drop
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
 latest-prop: "DEV"
