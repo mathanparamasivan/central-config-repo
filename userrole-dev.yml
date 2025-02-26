@@ -28,10 +28,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-      javax:
-        persistence:
-          validation:
-            factory: org.hibernate.validator.HibernateValidator
     hibernate:
       ddl-auto: update  # Options: none, validate, update, create-drop
     show-sql: true
