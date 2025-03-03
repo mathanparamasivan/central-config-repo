@@ -2,6 +2,21 @@ server:
   port: 8081
 
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 74018402649-i033lk3mh6md9979u9k8a6n650afoh4d.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
+
   datasource:
     url:  jdbc:mysql://localhost:3308/patient?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
