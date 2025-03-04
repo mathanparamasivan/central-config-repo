@@ -14,8 +14,11 @@ spring:
               - profile
               - email
         provider:
-          google:
-            issuer-uri: https://accounts.google.com
+          provider:
+            google:
+              authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+              token-uri: https://oauth2.googleapis.com/token
+              user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
 
   datasource:
     url:  jdbc:mysql://localhost:3308/patient?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
