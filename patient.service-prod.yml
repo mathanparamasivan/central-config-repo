@@ -34,7 +34,9 @@ spring:
     show-sql: true
 aws:
   region: us-east-1
+  credentials:
+    accessKey: AKIAWPPO6BYCQNL6XPWW
+    secretKey: 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
   s3:
     bucket-name: my-springboot-bucket
-    access-key: AKIAWPPO6BYCQNL6XPWW  # Avoid hardcoding, use environment variables
-    secret-key: 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
+
