@@ -32,3 +32,9 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
+aws:
+  region: us-east-1
+  s3:
+    bucket-name: my-springboot-bucket
+    access-key: AKIAWPPO6BYCQNL6XPWW  # Avoid hardcoding, use environment variables
+    secret-key: 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
