@@ -10,6 +10,15 @@ spring:
       time-to-live: 600000 # 10 minutes
 
   cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        register: true
+        deregister: true
+        health-check-path: /actuator/health
+        health-check-interval: 10s
     vault:
       uri: http://172.26.192.1:8200
       token: hvs.bk8Bg6eBYeP9FBQOQ330C39a
