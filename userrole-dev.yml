@@ -1,6 +1,14 @@
 server:
   port: 8084
-
+kafka:
+  bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+  consumer:
+    group-id: my-consumer-group
+    auto-offset-reset: earliest
+    enable-auto-commit: false
+    producer:
+      retries: 3
+      acks: all
 spring:
   redis:
     host: localhost
@@ -47,4 +55,4 @@ spring:
       org.hibernate.SQL: DEBUG
       org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
-latest-prop: "DEV"
+latest-prop: "test"

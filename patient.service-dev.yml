@@ -1,6 +1,15 @@
 server:
   port: 8081
 
+kafka:
+  bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
+  consumer:
+    group-id: my-consumer-group
+    auto-offset-reset: earliest
+    enable-auto-commit: false
+    producer:
+      retries: 3
+      acks: all
 spring:
   security:
     oauth2:
