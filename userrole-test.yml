@@ -1,14 +1,7 @@
 server:
   port: 8084
 kafka:
-  bootstrap-servers: localhost:29092,localhost:9092,localhost:9093,localhost:9094
-  consumer:
-    group-id: my-consumer-group
-    auto-offset-reset: earliest
-    enable-auto-commit: false
-    producer:
-      retries: 3
-      acks: all
+  bootstrap-servers: localhost:29092
 spring:
   redis:
     host: localhost
