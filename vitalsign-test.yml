@@ -1,4 +1,6 @@
 spring:
+  kafka:
+    bootstrap-servers: localhost:29092
   datasource:
     url: jdbc:mysql://localhost:3308/vitalsigndb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
